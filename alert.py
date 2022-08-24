@@ -3,7 +3,8 @@ import pandas_ta as ta
 import pandas as pd
 import requests
 import time
-def job()
+
+while True:
     exchange = ccxt.binance()
 
     bars = exchange.fetch_ohlcv('ETH/USDT', timeframe='5m', limit=500)
@@ -47,8 +48,6 @@ def job()
 
         requests.post(WEBHOOK_URL, json=payload)
        
-    if __nam__ == '__main__':
-        while true:
-            job()
-            time.sleep(10)
+    
+        time.sleep(10)
         
